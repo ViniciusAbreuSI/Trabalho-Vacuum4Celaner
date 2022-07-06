@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Random Vacuum Agent 4 Places</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <style>
+        .agent-actions { margin-left: auto; margin-right: auto; border-collapse: collapse; }
+        .agent-actions th { padding: 0.5ex; border: 1px solid hsl(240,10%,90%); background: hsl(240,10%,85%); text-align: center; }
+        .agent-actions td { padding: 0.25ex; border: 1px solid hsl(240,20%,80%); text-align: center; }
+
+        .robot { transition: transform 2.0s; }
+        .floor { fill: white; }
+        .floor.clean { fill: hsl(240,10%,90%); transition: fill 2.0s; }
+        .floor.dirty { fill: rgb(70, 30, 30); transition: fill 0.1s; }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="row" style="position: relative; height: 100vh;">
+      <div class="col-sm-6 col-md-offset-3" id="content" style="position: absolute; top: 50%; transform: translateY(-50%);">
+        <h3 style="padding: 0px;">Alunos: Lucas Silvério e Vinícius Abreu</h3>
+        <h2>Random Vacuum Agent 4 Places</h2>
+
+        <div id="agent-controlled-diagram">
+
+          <p>
+            The robot will choose its own actions based on simple rules. The boxes are randomly dirty.<br/>
+            <b>Alunos: Lucas Silvério e Vinícius Abreu</b>
+          </p>
+
+          <svg width="600" height="600"></svg>
+
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./vacuumCleaner.js"></script>
+    <script type="text/javascript" src="./controller_vacuumCleaner.js"></script>
+  </body>
+</html>
